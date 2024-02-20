@@ -1,0 +1,62 @@
+.viewers_component{
+    width: 100%;
+    min-height: 40vh;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: -0.7rem;
+    padding: 0 1rem;
+}
+.view{
+    width: 18vw;
+    height: 25vh;
+    border-radius: 1rem;
+    cursor: pointer;
+    position: relative;
+    border: 3px solid rgba(103, 103, 103, 0.432);
+    transition: all .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.view img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    transition: all .2s;
+    pointer-events: none;
+    /* z-index: 2; */
+}
+.view video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.8rem;
+    object-position: center;
+    opacity: 0;
+}
+.view:hover{
+    border-color: #f9f9f99b;
+    transform: scale(1.05);
+    box-shadow: 0 1.4rem 1.6rem -0.8rem rgba(0, 0, 0, 0.902), 0 1rem 0.8rem -0.8rem rgba(0, 0, 0, 0.587);
+}
+.view:hover img{
+    opacity: 0;
+    z-index: -1;
+}
+.view:hover video{
+    opacity: 1;
+    z-index: 2;
+}
+@media screen and (min-width:300px) and (max-width:600px) {
+    .viewers_component{
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-left: -.1rem;
+        padding: 0 1rem;
+    }
+    .view{
+        width: 100%;
+        min-height: 20vh;
+    }
+}

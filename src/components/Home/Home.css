@@ -1,0 +1,25 @@
+.home_page{
+    /* background: rgb(4, 7, 20); */
+    width: 100%;
+    min-height: 100vh;
+    color: #f9f9f9;
+    /* overflow-x: hidden; */
+}
+
+.main_bg{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 4rem;
+}
+.main_bg::after{
+    z-index: -1;
+    content: '';
+    position: fixed;
+    top: 0%;
+    background: url('../../assets/images/home-background.png');
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: top;
+}
